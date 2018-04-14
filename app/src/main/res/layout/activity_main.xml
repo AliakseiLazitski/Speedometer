@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#515151"
+    android:orientation="vertical"
+    tools:context="jork.juger.speedometer.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <jork.juger.speedometer.Speedometer
+            android:id="@+id/customPanel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:countOfDrawingValues="10"
+            app:maxValue="1000"
+            app:progressGradientColorArray="@array/colors"
+            app:value="1000.0"/>
+
+        <jork.juger.speedometer.SpeedometerWithRangedValues
+            android:id="@+id/customRangedPanel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:gradientColorArray="@array/colors"
+            app:progress="1000.0"
+            app:drawable="@mipmap/ic_launcher"
+            app:rangeArray="@array/intArray"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/progressTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textSize="18sp"/>
+    <SeekBar
+        android:id="@+id/progressSeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="1000"
+        android:padding="8dp"/>
+</LinearLayout>

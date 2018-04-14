@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Speedometer">
+        <attr name="value" format="float"/>
+        <attr name="progressGradientColorArray" format="reference"/>
+        <attr name="maxValue" format="float"/>
+        <attr name="countOfDrawingValues" format="integer"/>
+    </declare-styleable>
+    <declare-styleable name="SpeedometerWithRangedValues">
+        <attr name="rangeArray" format="reference"/>
+        <attr name="progress" format="float"/>
+        <attr name="gradientColorArray" format="reference"/>
+        <attr name="drawable" format="reference"/>
+    </declare-styleable>
+</resources>
